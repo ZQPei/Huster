@@ -33,6 +33,11 @@ or
 python -m huster.server --port [port=8000] --base_dir [base_dir="/"]
 ```
 
+For simplification, the following command can redirect the output to `/dev/null`.
+```bash
+nohup build_server --port 8000 >/dev/null 2>&1 &
+```
+
 
 ## Example
 If you have built a server on your machine, you can assess it by browsing `http://xxx.xxx.xxx.xxx:8000`. 
