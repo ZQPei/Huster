@@ -289,7 +289,7 @@ class SimpleHTTPRequestHandler(BaseHTTPServer.BaseHTTPRequestHandler):
         })
 
 
-def run_server(HandlerClass = SimpleHTTPRequestHandler,
+def server(HandlerClass = SimpleHTTPRequestHandler,
          ServerClass = BaseHTTPServer.HTTPServer, protocol="HTTP/1.0", port=8000):
     """Test the HTTP request handler class.
 

@@ -6,3 +6,6 @@ __pycache__/
 build/
 dist/
 MANIFEST
+MANIFEST.in
+
+*.egg-info/

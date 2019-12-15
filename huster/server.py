@@ -1,23 +1,23 @@
 import os
 import sys
 if sys.version_info.major == 2:
-    from .SimpleHTTPServerWithUpload_py2 import run_server
+    from .SimpleHTTPServerWithUpload_py2 import server
 elif sys.version_info.major == 3:
-    from .SimpleHTTPServerWithUpload_py3 import run_server
+    from .SimpleHTTPServerWithUpload_py3 import server
 else:
     raise RuntimeError("Python version not found!")
 
-__all__ = ['SimpleHTTPRequestHandler']
+__all__ = ['build_server', 'run_server']
 
     
-def build_server(port=8088, base_dir="/"):
+def run_server(port=8088, base_dir="/"):
     if os.path.isdir(base_dir):
         os.chdir(base_dir)
     else:
         raise UserWarning("base_dir is not a rightful directory")
         os.chdir("/")
 
-    run_server(port=port)
+    server(port=port)
     
 
 def parse_args():
@@ -27,6 +27,8 @@ def parse_args():
     parser.add_argument("--base_dir", default="/", type=str)
     return parser.parse_args()
 
-if __name__ == "__main__":
+
+def build_server():
     args = parse_args()
-    build_server(port=args.port, base_dir=args.base_dir)
+    run_server(port=args.port, base_dir=args.base_dir)
+

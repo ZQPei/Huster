@@ -1,0 +1,8 @@
+#!/home/pzq/anaconda3/bin/python
+
+import sys
+from huster.server import build_server
+
+
+if __name__ == "__main__":
+    build_server()
