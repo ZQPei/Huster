@@ -65,9 +65,11 @@ def copy_scripts_to_bin(script_file):
     else:
         script_lines.insert(0, first_line)
 
-    bin_file = os.path.join(_dir, os.path.basename(script_file))
     if not is_windows():
-        bin_file = os.path.splitext(bin_file)[0]
+        bin_file = os.path.join(_dir, os.path.splitext(os.path.basename(script_file))[0])
+    else:
+        bin_file = os.path.join(_dir, "Scripts", os.path.basename(script_file))
+
     try:
         write_lines(bin_file, script_lines)
         chmod(bin_file, "775")
