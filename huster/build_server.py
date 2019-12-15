@@ -24,9 +24,9 @@ def parse_args():
     import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument("--port", default=8000, type=int)
+    parser.add_argument("--base_dir", default="/", type=str)
     return parser.parse_args()
 
 if __name__ == "__main__":
     args = parse_args()
-    port = args.port
-    build_server(port=port)
+    build_server(port=args.port, base_dir=args.base_dir)

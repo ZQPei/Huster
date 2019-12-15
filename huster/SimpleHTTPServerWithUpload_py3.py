@@ -1,3 +1,6 @@
+from __future__ import print_function
+from __future__ import absolute_import
+
 """Simple HTTP Server With Upload.
 
 This module builds on BaseHTTPServer by implementing the standard GET
@@ -10,6 +13,7 @@ __version__ = "0.1"
 __all__ = ["SimpleHTTPRequestHandler"]
  
 import os
+import sys
 import posixpath
 import http.server
 import urllib.request, urllib.parse, urllib.error
@@ -310,7 +314,6 @@ def test(HandlerClass = SimpleHTTPRequestHandler,
 
  
 if __name__ == '__main__':
-    import sys
     if os.getcwd() != '/':
         os.chdir('/')
     test(port=8088)

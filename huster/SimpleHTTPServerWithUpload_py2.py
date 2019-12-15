@@ -1,3 +1,7 @@
+from __future__ import print_function
+from __future__ import absolute_import
+
+
 """Simple HTTP Server With Upload.
 
 This module builds on BaseHTTPServer by implementing the standard GET
@@ -10,6 +14,7 @@ __version__ = "0.1"
 __all__ = ["SimpleHTTPRequestHandler"]
 
 import os
+import sys
 import posixpath
 import BaseHTTPServer
 import urllib
@@ -297,7 +302,7 @@ def run_server(HandlerClass = SimpleHTTPRequestHandler,
     httpd = ServerClass(server_address, HandlerClass)
 
     sa = httpd.socket.getsockname()
-    print "Serving HTTP on", sa[0], "port", sa[1], "..."
+    print("Serving HTTP on", sa[0], "port", sa[1], "...")
     httpd.serve_forever()
 
 
