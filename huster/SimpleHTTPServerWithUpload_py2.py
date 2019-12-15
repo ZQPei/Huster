@@ -12,6 +12,8 @@ and HEAD requests in a fairly straightforward manner.
 
 __version__ = "0.1"
 __all__ = ["SimpleHTTPRequestHandler"]
+__author__ = "bones7456"
+__revised_by__ = "ZQPei"
 
 import os
 import sys
