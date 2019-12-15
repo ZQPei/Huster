@@ -1,7 +1,7 @@
 from distutils.core import setup
 from utils import copy_scripts_to_bin
 
-copy_scripts_to_bin("./build_server.py")
+copy_scripts_to_bin("./utils/build_server.py")
 
 setup(
     name='Huster',

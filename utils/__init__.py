@@ -1,0 +1,1 @@
+from .utils import copy_scripts_to_bin

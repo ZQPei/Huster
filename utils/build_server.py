@@ -1,7 +1,7 @@
 #!/home/pzq/anaconda3/bin/python
 
 import sys
-from huster.build_server import build_server, parse_args
+from huster.server import build_server, parse_args
 
 
 if __name__ == "__main__":
