@@ -65,11 +65,13 @@ def copy_scripts_to_bin(script_file):
     else:
         script_lines.insert(0, first_line)
 
-    bin_file = os.path.join(_dir, os.path.splitext(os.path.basename(script_file))[0])
+    bin_file = os.path.join(_dir, os.path.basename(script_file))
+    if not is_windows():
+        bin_file = os.path.splitext(bin_file)[0]
     try:
         write_lines(bin_file, script_lines)
         chmod(bin_file, "775")
-        print("Scripts have been writen to {}!".format(bin_file))
+        print("Scripts have been writen to {}".format(bin_file))
     except Exception as e:
         UserWarning("Failed to write scripts to {}, permission denied, please use sudo!".format(bin_file))
 
