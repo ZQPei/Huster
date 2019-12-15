@@ -42,7 +42,7 @@ nohup build_server --port 8000 >/dev/null 2>&1 &
 ## Example
 If you have built a server on your machine, you can assess it by browsing `http://xxx.xxx.xxx.xxx:8000`. 
 
-It provide a button to upload file from local to server.
+It provides a button to upload file from local to server.
 
 ![bash](./demo/huster_demo_bash.png)
 
