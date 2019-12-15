@@ -30,7 +30,7 @@ build_server --port [port=8000] --base_dir [base_dir="/"]
 or
 
 ```bash
-python -m huster.build_server --port [port=8000] --base_dir [base_dir="/"]
+python -m huster.server --port [port=8000] --base_dir [base_dir="/"]
 ```
 
 

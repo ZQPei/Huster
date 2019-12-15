@@ -32,3 +32,7 @@ def build_server():
     args = parse_args()
     run_server(port=args.port, base_dir=args.base_dir)
 
+
+if __name__ == "__main__":
+    build_server()
+    
