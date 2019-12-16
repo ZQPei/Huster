@@ -2,6 +2,11 @@
 
 HTTP Uploading Server Tool
 
+
+![](https://img.shields.io/badge/python2-passing-brightgreen)
+![](https://img.shields.io/badge/python3-passing-brightgreen)
+
+
 ## Install
 
 You can install it from pip or source code.
