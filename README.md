@@ -11,13 +11,13 @@ HTTP Uploading Server Tool
 
 You can install it from pip or source code.
 
-1. pip
+- install from pip
 
     ```bash
     pip install huster
     ```
 
-2. source code
+- install from source code
 
     ```bash
     git clone https://github.com/ZQPei/Huster.git
