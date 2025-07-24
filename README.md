@@ -17,6 +17,11 @@ You can install it from pip or source code.
     pip install huster
     ```
 
+- install from github
+    ```bash
+    pip install git+https://github.com/ZQPei/Huster.git@master
+    ```
+
 - install from source code
 
     ```bash

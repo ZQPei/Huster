@@ -19,7 +19,7 @@ from setuptools import setup
 
 setup(
     name='Huster',
-    version='0.0.5',
+    version='0.0.6',
     author='ZQPei',
     author_email='peiziqiang@gmail.com',
     packages=['huster'],
