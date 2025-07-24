@@ -19,7 +19,12 @@ import sys
 import posixpath
 import http.server
 import urllib.request, urllib.parse, urllib.error
-import cgi
+if sys.version_info >= (3, 13):
+    # Python 3.13+ replace cgi.escape with html.escape
+    import html as cgi
+else:
+    # Python 3.12 using cgi.escape
+    import cgi
 import shutil
 import mimetypes
 import re
